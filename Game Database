@@ -1,0 +1,17 @@
+- Creat a game database 
+
+CREATE TABLE Games (id INTEGER PRIMARY KEY, name TEXT, price INTEGER);
+
+INSERT INTO Games VALUES
+(1, "Stardew" , 15);
+INSERT INTO Games VALUES
+(2, "Animal", 60);
+INSERT INTO Games VALUES
+(3, "Hogwarts", 100);
+INSERT INTO Games VALUES
+(4, "Wylde", 30);
+INSERT INTO Games VALUES
+(5, "Breath", 75);
+
+--Display the database ordered by descending price. 
+Select * from Games ORDER by price desc;
