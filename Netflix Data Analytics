@@ -1,7 +1,6 @@
-SELECT * FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info" LIMIT 5;
+#In this SQL code, I'm querying a database that's holding Nexflix data to answer questions about the data
 
 /*Joining data from both tables*/
-
 SELECT title, director
 FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info"
 JOIN "CharlotteChaze/BreakIntoTech"."netflix_people"
@@ -9,13 +8,11 @@ ON "CharlotteChaze/BreakIntoTech"."netflix_titles_info".show_id = "CharlotteChaz
 
 
 /*How many movie titles are there in the database? (movies only, not tv shows)?*/
-
 SELECT COUNT(TYPE)
 FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info"
 WHERE TYPE ='Movie';
 
 /*When was the most recent batch of tv shows and/or movies added to the database?*/
-
 SELECT * 
 FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info"
 WHERE date_added IS NOT NULL
@@ -23,7 +20,6 @@ ORDER BY date_added DESC
 LIMIT 10; 
 
 /* List all the movies and tv shows in alphabetical order. */
-
 SELECT * 
 FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info"
 ORDER BY title;
